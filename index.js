@@ -9,8 +9,12 @@ const tutorials = [
   'what is the difference between == and ===?',
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
-];
+]
 
-const titleCased = () => {
-  return tutorials
+const myTitleCased = 'what does the this keyword mean?';
+const words = myTitleCased.split(" ");
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substring(1);
 }
+const joinedWords = words.join();
+const titleCased = mySentence.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
