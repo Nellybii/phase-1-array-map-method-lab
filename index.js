@@ -10,11 +10,9 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ]
-
-const myTitleCased = 'what does the this keyword mean?';
-const words = myTitleCased.split(" ");
-for (let i = 0; i < words.length; i++) {
-    words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+function titleCased(){
+const splitTutorials = tutorials.map((tutorials) => tutorials.split(","))
+const capitalizeSplitTutorials = splitTutorials.map(tutorials => tutorials.map((word) => word.charAt(0).toUpperCase() + word.slice(1)))
+const joinedCapitalizeSplitTutorials = capitalizeSplitTutorials.map((tutorials) => tutorials.join(' '))
+return	joinedCapitalizeSplitTutorials;
 }
-const joinedWords = words.join();
-const titleCased = mySentence.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
